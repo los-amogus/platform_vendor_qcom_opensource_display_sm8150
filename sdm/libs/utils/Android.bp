@@ -1,0 +1,21 @@
+cc_library_shared {
+    name: "libsdmutils",
+    vendor: true,
+    header_libs: ["display_headers"],
+    shared_libs: ["libdisplaydebug"],
+    cflags: [
+        "-DLOG_TAG=\"SDM\"",
+        "-Wno-missing-field-initializers",
+        "-Wconversion",
+        "-Wall",
+        "-Werror",
+        "-DUSE_GRALLOC1",
+    ],
+    srcs: [
+        "debug.cpp",
+        "rect.cpp",
+        "sys.cpp",
+        "formats.cpp",
+        "utils.cpp",
+    ],
+}

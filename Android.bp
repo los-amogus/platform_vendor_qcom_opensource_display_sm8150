@@ -1,5 +1,8 @@
 soong_namespace {
-    imports: ["vendor/qcom/opensource/display-commonsys-intf"],
+    imports: [
+        "vendor/qcom/opensource/display-commonsys-intf",
+        "hardware/qcom/display/libdebug",
+    ],
 }
 
 cc_defaults {
